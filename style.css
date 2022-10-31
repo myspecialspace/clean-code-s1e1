@@ -48,7 +48,8 @@
   padding: 0px;
 }
 
-.liststyle {
+.task,
+.tasks-title {
   list-style: none;
 }
 
