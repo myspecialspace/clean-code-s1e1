@@ -31,7 +31,7 @@ body {
   display: inline-block;
   flex-grow: 1;
 }
-.task-row-wrapper {
+.new-task-wrapper {
   display: flex;
 }
 ul {
@@ -128,7 +128,7 @@ button.delete img:hover {
 }
 
 /* Completed */
-ul#completed-tasks label {
+ul#done-tasks label {
   text-decoration: line-through;
   color: #888;
 }
@@ -138,11 +138,11 @@ ul li input[type="text"] {
   display:none;
 }
 
-ul li.edit-mode input[type="text"] {
+ul li.redact input[type="text"] {
   display:inline-block;
   width:224px;
 }
 
-ul li.edit-mode label {
+ul li.redact label {
   display:none;
 }
