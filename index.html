@@ -5,49 +5,49 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
-  <body>
+  <body class="body">
     <div class="banner">
       <img class="image" src="./eisenhower-matrix.jpg">
       <a class="link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </div>
     <div class="container">
       <p id="add-item">
-        <label for="new-task">Add Item</label>
+        <label class="new-task" for="new-task">Add Item</label>
         <div class="new-task-wrapper">
-          <input id="new-task"class="task" type="text">
-          <button>Add</button>
+          <input id="new-task"class="task-text task-input outline" type="text">
+          <button class="btn outline">Add</button>
         </div>
       </p>
-      <h3>Todo</h3>
-      <ul id="todo-tasks">
-        <li>
-          <input type="checkbox">
-          <label class="task">Pay Bills</label>
-          <input type="text" class="task">
-          <button class="edit">Edit</button>
-          <button class="delete">
-            <img src="./remove.svg">
+      <h3 class="tasks-title liststyle">Todo</h3>
+      <ul id="todo-tasks" class="tasks">
+        <li class="task liststyle">
+          <input type="checkbox" class="task-checkbox outline">
+          <label class="task-text task-name">Pay Bills</label>
+          <input type="text" class="task-text task-input outline">
+          <button class="btn edit outline">Edit</button>
+          <button class="btn delete outline">
+            <img class="btn-img" src="./remove.svg">
           </button>
         </li>
-        <li class="redact">
-          <input type="checkbox">
-          <label class="task">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="task">
-          <button class="edit">Save</button>
-          <button class="delete">
-            <img src="./remove.svg">
+        <li class="task liststyle redact">
+          <input type="checkbox" class="task-checkbox outline">
+          <label class="task-text task-name">Go Shopping</label>
+          <input type="text" value="Go Shopping" class="task-text task-input outline">
+          <button class="btn edit outline">Save</button>
+          <button class="btn delete outline">
+            <img class="btn-img" src="./remove.svg">
           </button>
         </li>
       </ul>
-      <h3>Completed</h3>
-      <ul id="done-tasks">
-        <li>
-          <input type="checkbox" checked>
-          <label class="task">See the Doctor</label>
-          <input type="text" class="task">
-          <button class="edit">Edit</button>
-          <button class="delete">
-            <img src="./remove.svg">
+      <h3 class="tasks-title liststyle">Completed</h3>
+      <ul id="done-tasks" class="tasks">
+        <li class="task liststyle">
+          <input type="checkbox" class="task-checkbox" checked>
+          <label class="task-text task-name">See the Doctor</label>
+          <input type="text" class="task-text task-input">
+          <button class="btn edit">Edit</button>
+          <button class="btn delete">
+            <img class="btn-img" src="./remove.svg">
           </button>
         </li>
       </ul>
