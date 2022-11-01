@@ -25,27 +25,27 @@ var createNewTaskElement=function(taskString){
     var label=document.createElement("label");//label
     //input (text)
     var editInput=document.createElement("input");//text
-    //button.edit
+    //button.task__edit
     var editButton=document.createElement("button");//edit button
 
-    //button.delete
+    //button.task__delete
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
     listItem.classList.add("task");
-    checkBox.classList.add("task-checkbox");
-    deleteButtonImg.classList.add("btn-img");
+    checkBox.classList.add("task__checkbox");
+    deleteButtonImg.classList.add("task__delete_img");
 
     label.innerText=taskString;
-    label.classList.add("task-text", "task-name");
+    label.classList.add("text", "task__name"); //class .text
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.classList.add("task-text", "task-input", "outline");
+    editInput.classList.add("text", "task__input"); //class .text
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.classList.add("btn", "edit", "outline");
+    editButton.classList.add("btn", "task__edit");
 
-    deleteButton.classList.add("btn", "delete", "outline");
+    deleteButton.classList.add("btn", "task__delete");
     deleteButtonImg.src='./remove.svg';
     deleteButton.appendChild(deleteButtonImg);
 
@@ -86,12 +86,12 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit");
-    var containsClass=listItem.classList.contains("redact");
-    //If class of the parent is .redact
+    var editBtn=listItem.querySelector(".task__edit");
+    var containsClass=listItem.classList.contains("task_redact");
+    //If class of the parent is .task_redact
     if(containsClass){
 
-        //switch to .redact
+        //switch to .task_redact
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
@@ -100,8 +100,8 @@ var editTask=function(){
         editBtn.innerText="Save";
     }
 
-    //toggle .redact on the parent.
-    listItem.classList.toggle("redact");
+    //toggle .task_redact on the parent.
+    listItem.classList.toggle("task_redact");
 };
 
 
@@ -158,8 +158,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit");
-    var deleteButton=taskListItem.querySelector("button.delete");
+    var editButton=taskListItem.querySelector("button.task__edit");
+    var deleteButton=taskListItem.querySelector("button.task__delete");
 
 
     //Bind editTask to edit button.
